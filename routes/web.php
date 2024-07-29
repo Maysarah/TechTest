@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\WebArticleController;
+use App\Services\ImageService;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +19,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::middleware(['web'])->group(function () {
+    Route::resource('articles', WebArticleController::class);
+});
+
+
