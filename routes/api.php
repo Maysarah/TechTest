@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\ApiArticleController;
+use App\Http\Controllers\ArticleController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,5 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::middleware('api')->group(function () {
-    Route::resource('articles', ApiArticleController::class);
+    Route::resource('articles', ArticleController::class);
 });

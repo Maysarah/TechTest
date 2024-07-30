@@ -8,7 +8,7 @@ use App\Models\Image;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 
-class ImageService
+class ArticleImageService
 {
     /**
      * Store images for an article on S3 and create records in the database.

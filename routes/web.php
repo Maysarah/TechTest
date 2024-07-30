@@ -1,8 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\WebArticleController;
-use App\Services\ImageService;
+use App\Services\ArticleImageService;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +20,6 @@ Route::get('/', function () {
 });
 
 Route::middleware(['web'])->group(function () {
-    Route::resource('articles', WebArticleController::class);
+    Route::resource('articles', ArticleController::class);
 });
 
