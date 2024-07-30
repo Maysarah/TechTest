@@ -24,4 +24,3 @@ Route::middleware(['web'])->group(function () {
     Route::resource('articles', WebArticleController::class);
 });
 
-

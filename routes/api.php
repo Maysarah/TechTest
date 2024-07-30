@@ -1,8 +1,6 @@
 <?php
 
 use App\Http\Controllers\ApiArticleController;
-use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\TestController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,9 +19,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-//Route::post('/test-upload', [TestController::class, 'testUpload']);
-//Route::get('/test-retrieve', [TestController::class, 'testRetrieve']);
-//Route::get('/test-list', [TestController::class, 'testList']);
-//Route::delete('/test-delete', [TestController::class, 'testDelete']);
-
-Route::apiResource('articles', ApiArticleController::class);
+Route::middleware('api')->group(function () {
+    Route::resource('articles', ApiArticleController::class);
+});

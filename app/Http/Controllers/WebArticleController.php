@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreArticleRequestWeb;
 use App\Models\Article;
-use App\Models\Image;
-use Illuminate\Http\Request;
-use App\Http\Requests\StoreArticleRequest;
 use App\Services\ImageService;
 
 class WebArticleController extends Controller
@@ -28,7 +26,7 @@ class WebArticleController extends Controller
         return view('articles.create');
     }
 
-    public function store(StoreArticleRequest $request)
+    public function store(StoreArticleRequestWeb $request)
     {
         // Validate and create the article
         $article = Article::create($request->only(['title', 'content']));
@@ -53,7 +51,7 @@ class WebArticleController extends Controller
         return view('articles.edit', compact('article'));
     }
 
-    public function update(StoreArticleRequest $request, Article $article)
+    public function update(StoreArticleRequestWeb $request, Article $article)
     {
         // Update the article
         $article->update($request->only(['title', 'content']));

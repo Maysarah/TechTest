@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
-use App\Http\Requests\StoreArticleRequest;
+use App\Http\Requests\StoreArticleRequestApi;
 
 class ApiArticleController extends Controller
 {
@@ -14,7 +14,7 @@ class ApiArticleController extends Controller
         return response()->json($articles);
     }
 
-    public function store(StoreArticleRequest $request)
+    public function store(StoreArticleRequestApi $request)
     {
         // Create the article
         $article = Article::create($request->only(['title', 'content']));
@@ -28,7 +28,7 @@ class ApiArticleController extends Controller
         return response()->json($article);
     }
 
-    public function update(StoreArticleRequest $request, Article $article)
+    public function update(StoreArticleRequestApi $request, Article $article)
     {
         $article->update($request->only(['title', 'content']));
         return response()->json($article);
