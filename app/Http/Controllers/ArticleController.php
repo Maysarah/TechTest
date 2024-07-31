@@ -30,7 +30,7 @@ class ArticleController extends Controller
     public function index(Request $request): JsonResponse|View
     {
         // Fetch articles with images
-        $articles = Article::with('images')->get();
+         $articles = $this->articleService->getArticlesWithImages();
 
         // Pass articles directly to handleResponse
         return $this->responseHandlerService->handleResponse(

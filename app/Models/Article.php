@@ -19,4 +19,6 @@ class Article extends Model
         return $this->hasMany(Image::class);
     }
     public $timestamps = false;
+
+
 }

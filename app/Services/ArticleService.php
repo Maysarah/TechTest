@@ -14,6 +14,9 @@ class ArticleService
         $this->imageService = $imageService;
     }
 
+    public function getArticlesWithImages() {
+        return Article::with('images')->get();
+    }
     public function createArticle(array $data): Article
     {
         return DB::transaction(function () use ($data) {
