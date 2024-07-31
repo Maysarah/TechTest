@@ -32,6 +32,13 @@ This API is built using Laravel 10 with PHP version 8.3, providing a robust and 
 3. Update the .env file with the database configuration and other settings.
     ```bash
 
+       DB_CONNECTION=mysql \
+       DB_HOST=mysql \ 
+       DB_PORT=3306 \
+       DB_DATABASE=laravel-db_db \ this is an example, You can choose your own
+       DB_USERNAME=root \
+       DB_PASSWORD=password
+
        
 
 4. Add S3 configuration to .env to manage the images part .
