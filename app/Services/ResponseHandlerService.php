@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Services;
 
 use Illuminate\Http\Request;
@@ -18,9 +17,16 @@ class ResponseHandlerService
     public function handleResponse(mixed $data, Request $request): JsonResponse|View
     {
         if ($request->is('api/*')) {
+            // If data is an array or object, return as JSON
             return response()->json($data);
         }
 
-        return view($data['view'], $data['compact']);
+        // If request is not for API, ensure data has view and compact keys
+        if (is_array($data) && isset($data['view'])) {
+            return view($data['view'], $data['compact']);
+        }
+
+        // Default handling in case no view is provided
+        return view('default-view'); // Replace with your default view if needed
     }
 }

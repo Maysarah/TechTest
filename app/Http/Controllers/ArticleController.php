@@ -29,11 +29,16 @@ class ArticleController extends Controller
      */
     public function index(Request $request): JsonResponse|View
     {
+        // Fetch articles with images
         $articles = Article::with('images')->get();
-        return $this->responseHandlerService->handleResponse([
-            'view' => 'articles.index',
-            'compact' => compact('articles')
-        ], $request);
+
+        // Pass articles directly to handleResponse
+        return $this->responseHandlerService->handleResponse(
+            $request->is('api/*')
+                ? $articles
+                : ['view' => 'articles.index', 'compact' => compact('articles')],
+            $request
+        );
     }
 
     /**
@@ -44,7 +49,7 @@ class ArticleController extends Controller
      */
     public function create(Request $request): JsonResponse|View
     {
-        // For web request, return the view with necessary data
+        // Return the view for creating a new article
         return $this->responseHandlerService->handleResponse([
             'view' => 'articles.create',
             'compact' => [] // No additional data needed for the create form
@@ -59,8 +64,10 @@ class ArticleController extends Controller
      */
     public function store(StoreArticleRequest $request): JsonResponse|View
     {
+        // Create a new article
         $article = $this->articleService->createArticle($request->validated());
 
+        // Refresh the list of articles and return the view or JSON response
         return $this->responseHandlerService->handleResponse([
             'view' => 'articles.index',
             'compact' => [
@@ -79,7 +86,10 @@ class ArticleController extends Controller
      */
     public function show(Article $article, Request $request): JsonResponse|View
     {
+        // Load images for the specified article
         $article->load('images');
+
+        // Return the view or JSON response with the article data
         return $this->responseHandlerService->handleResponse([
             'view' => 'articles.show',
             'compact' => compact('article')
@@ -95,7 +105,10 @@ class ArticleController extends Controller
      */
     public function edit(Article $article, Request $request): JsonResponse|View
     {
+        // Load images for the specified article
         $article->load('images');
+
+        // Return the view or JSON response for editing the article
         return $this->responseHandlerService->handleResponse([
             'view' => 'articles.edit',
             'compact' => compact('article')
@@ -111,8 +124,10 @@ class ArticleController extends Controller
      */
     public function update(StoreArticleRequest $request, Article $article): JsonResponse|View
     {
+        // Update the article
         $article = $this->articleService->updateArticle($article, $request->validated());
 
+        // Refresh the list of articles and return the view or JSON response
         return $this->responseHandlerService->handleResponse([
             'view' => 'articles.index',
             'compact' => [
@@ -131,8 +146,10 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article, Request $request): JsonResponse|View
     {
+        // Delete the article
         $this->articleService->deleteArticle($article);
 
+        // Refresh the list of articles and return the view or JSON response
         return $this->responseHandlerService->handleResponse([
             'view' => 'articles.index',
             'compact' => [
