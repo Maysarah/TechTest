@@ -195,7 +195,7 @@
                         "S3Bucket": {
                           "Ref": "ServerlessDeploymentBucket"
                         },
-                        "S3Key": "serverless/my-laravel-service/dev/1722470879441-2024-08-01T00:07:59.441Z/my-laravel-service.zip"
+                        "S3Key": "serverless/my-laravel-service/dev/1722474670222-2024-08-01T01:11:10.222Z/my-laravel-service.zip"
                       },
                       "Handler": "public/index.php",
                       "Runtime": "provided.al2",
@@ -229,14 +229,14 @@
                       "WebLogGroup"
                     ]
                   },
-                  "WebLambdaVersionS84Q5Cdovtjx22QsMVcfukkDy2yBQI4h2XLfinSkspA": {
+                  "WebLambdaVersionAndbJfOftdZnIU5PZNb9G7Qrbxh5fH7ZkZRpiozUm6Y": {
                     "Type": "AWS::Lambda::Version",
                     "DeletionPolicy": "Retain",
                     "Properties": {
                       "FunctionName": {
                         "Ref": "WebLambdaFunction"
                       },
-                      "CodeSha256": "4PLgEvUTBsflQz7p7xpKRS/3XMCI0qPM3LrQfOIJze8="
+                      "CodeSha256": "hvn4Tc63hl1/6deW2XeSBjZ2/j2/Cmr1XjNTej+4ZBY="
                     }
                   },
                   "HttpApi": {
@@ -347,7 +347,7 @@
                   "WebLambdaFunctionQualifiedArn": {
                     "Description": "Current Lambda function version",
                     "Value": {
-                      "Ref": "WebLambdaVersionS84Q5Cdovtjx22QsMVcfukkDy2yBQI4h2XLfinSkspA"
+                      "Ref": "WebLambdaVersionAndbJfOftdZnIU5PZNb9G7Qrbxh5fH7ZkZRpiozUm6Y"
                     },
                     "Export": {
                       "Name": "sls-my-laravel-service-dev-WebLambdaFunctionQualifiedArn"
@@ -494,7 +494,7 @@
                 "timeout": 60,
                 "runtime": "provided.al2",
                 "vpc": {},
-                "versionLogicalId": "WebLambdaVersionS84Q5Cdovtjx22QsMVcfukkDy2yBQI4h2XLfinSkspA"
+                "versionLogicalId": "WebLambdaVersionAndbJfOftdZnIU5PZNb9G7Qrbxh5fH7ZkZRpiozUm6Y"
               }
             }
           },
@@ -698,7 +698,7 @@
                         "S3Bucket": {
                           "Ref": "ServerlessDeploymentBucket"
                         },
-                        "S3Key": "serverless/my-laravel-service/dev/1722470879441-2024-08-01T00:07:59.441Z/my-laravel-service.zip"
+                        "S3Key": "serverless/my-laravel-service/dev/1722474670222-2024-08-01T01:11:10.222Z/my-laravel-service.zip"
                       },
                       "Handler": "public/index.php",
                       "Runtime": "provided.al2",
@@ -732,14 +732,14 @@
                       "WebLogGroup"
                     ]
                   },
-                  "WebLambdaVersionS84Q5Cdovtjx22QsMVcfukkDy2yBQI4h2XLfinSkspA": {
+                  "WebLambdaVersionAndbJfOftdZnIU5PZNb9G7Qrbxh5fH7ZkZRpiozUm6Y": {
                     "Type": "AWS::Lambda::Version",
                     "DeletionPolicy": "Retain",
                     "Properties": {
                       "FunctionName": {
                         "Ref": "WebLambdaFunction"
                       },
-                      "CodeSha256": "4PLgEvUTBsflQz7p7xpKRS/3XMCI0qPM3LrQfOIJze8="
+                      "CodeSha256": "hvn4Tc63hl1/6deW2XeSBjZ2/j2/Cmr1XjNTej+4ZBY="
                     }
                   },
                   "HttpApi": {
@@ -850,7 +850,7 @@
                   "WebLambdaFunctionQualifiedArn": {
                     "Description": "Current Lambda function version",
                     "Value": {
-                      "Ref": "WebLambdaVersionS84Q5Cdovtjx22QsMVcfukkDy2yBQI4h2XLfinSkspA"
+                      "Ref": "WebLambdaVersionAndbJfOftdZnIU5PZNb9G7Qrbxh5fH7ZkZRpiozUm6Y"
                     },
                     "Export": {
                       "Name": "sls-my-laravel-service-dev-WebLambdaFunctionQualifiedArn"
@@ -997,7 +997,7 @@
                 "timeout": 60,
                 "runtime": "provided.al2",
                 "vpc": {},
-                "versionLogicalId": "WebLambdaVersionS84Q5Cdovtjx22QsMVcfukkDy2yBQI4h2XLfinSkspA"
+                "versionLogicalId": "WebLambdaVersionAndbJfOftdZnIU5PZNb9G7Qrbxh5fH7ZkZRpiozUm6Y"
               }
             }
           },
@@ -1200,7 +1200,7 @@
                         "S3Bucket": {
                           "Ref": "ServerlessDeploymentBucket"
                         },
-                        "S3Key": "serverless/my-laravel-service/dev/1722470879441-2024-08-01T00:07:59.441Z/my-laravel-service.zip"
+                        "S3Key": "serverless/my-laravel-service/dev/1722474670222-2024-08-01T01:11:10.222Z/my-laravel-service.zip"
                       },
                       "Handler": "public/index.php",
                       "Runtime": "provided.al2",
@@ -1234,14 +1234,14 @@
                       "WebLogGroup"
                     ]
                   },
-                  "WebLambdaVersionS84Q5Cdovtjx22QsMVcfukkDy2yBQI4h2XLfinSkspA": {
+                  "WebLambdaVersionAndbJfOftdZnIU5PZNb9G7Qrbxh5fH7ZkZRpiozUm6Y": {
                     "Type": "AWS::Lambda::Version",
                     "DeletionPolicy": "Retain",
                     "Properties": {
                       "FunctionName": {
                         "Ref": "WebLambdaFunction"
                       },
-                      "CodeSha256": "4PLgEvUTBsflQz7p7xpKRS/3XMCI0qPM3LrQfOIJze8="
+                      "CodeSha256": "hvn4Tc63hl1/6deW2XeSBjZ2/j2/Cmr1XjNTej+4ZBY="
                     }
                   },
                   "HttpApi": {
@@ -1352,7 +1352,7 @@
                   "WebLambdaFunctionQualifiedArn": {
                     "Description": "Current Lambda function version",
                     "Value": {
-                      "Ref": "WebLambdaVersionS84Q5Cdovtjx22QsMVcfukkDy2yBQI4h2XLfinSkspA"
+                      "Ref": "WebLambdaVersionAndbJfOftdZnIU5PZNb9G7Qrbxh5fH7ZkZRpiozUm6Y"
                     },
                     "Export": {
                       "Name": "sls-my-laravel-service-dev-WebLambdaFunctionQualifiedArn"
@@ -1499,7 +1499,7 @@
                 "timeout": 60,
                 "runtime": "provided.al2",
                 "vpc": {},
-                "versionLogicalId": "WebLambdaVersionS84Q5Cdovtjx22QsMVcfukkDy2yBQI4h2XLfinSkspA"
+                "versionLogicalId": "WebLambdaVersionAndbJfOftdZnIU5PZNb9G7Qrbxh5fH7ZkZRpiozUm6Y"
               }
             }
           },
@@ -1703,7 +1703,7 @@
                   "S3Bucket": {
                     "Ref": "ServerlessDeploymentBucket"
                   },
-                  "S3Key": "serverless/my-laravel-service/dev/1722470879441-2024-08-01T00:07:59.441Z/my-laravel-service.zip"
+                  "S3Key": "serverless/my-laravel-service/dev/1722474670222-2024-08-01T01:11:10.222Z/my-laravel-service.zip"
                 },
                 "Handler": "public/index.php",
                 "Runtime": "provided.al2",
@@ -1737,14 +1737,14 @@
                 "WebLogGroup"
               ]
             },
-            "WebLambdaVersionS84Q5Cdovtjx22QsMVcfukkDy2yBQI4h2XLfinSkspA": {
+            "WebLambdaVersionAndbJfOftdZnIU5PZNb9G7Qrbxh5fH7ZkZRpiozUm6Y": {
               "Type": "AWS::Lambda::Version",
               "DeletionPolicy": "Retain",
               "Properties": {
                 "FunctionName": {
                   "Ref": "WebLambdaFunction"
                 },
-                "CodeSha256": "4PLgEvUTBsflQz7p7xpKRS/3XMCI0qPM3LrQfOIJze8="
+                "CodeSha256": "hvn4Tc63hl1/6deW2XeSBjZ2/j2/Cmr1XjNTej+4ZBY="
               }
             },
             "HttpApi": {
@@ -1855,7 +1855,7 @@
             "WebLambdaFunctionQualifiedArn": {
               "Description": "Current Lambda function version",
               "Value": {
-                "Ref": "WebLambdaVersionS84Q5Cdovtjx22QsMVcfukkDy2yBQI4h2XLfinSkspA"
+                "Ref": "WebLambdaVersionAndbJfOftdZnIU5PZNb9G7Qrbxh5fH7ZkZRpiozUm6Y"
               },
               "Export": {
                 "Name": "sls-my-laravel-service-dev-WebLambdaFunctionQualifiedArn"
@@ -2002,7 +2002,7 @@
           "timeout": 60,
           "runtime": "provided.al2",
           "vpc": {},
-          "versionLogicalId": "WebLambdaVersionS84Q5Cdovtjx22QsMVcfukkDy2yBQI4h2XLfinSkspA"
+          "versionLogicalId": "WebLambdaVersionAndbJfOftdZnIU5PZNb9G7Qrbxh5fH7ZkZRpiozUm6Y"
         }
       }
     },
@@ -2037,12 +2037,12 @@
     "serviceProviderAwsCfStackName": "my-laravel-service-dev",
     "serviceProviderAwsCfStackId": "arn:aws:cloudformation:us-east-1:010526251219:stack/my-laravel-service-dev/f0f59d70-4f93-11ef-936c-0affd925f63d",
     "serviceProviderAwsCfStackCreated": "2024-07-31T23:23:49.371Z",
-    "serviceProviderAwsCfStackUpdated": "2024-08-01T00:08:17.464Z",
+    "serviceProviderAwsCfStackUpdated": "2024-08-01T01:11:33.110Z",
     "serviceProviderAwsCfStackStatus": "UPDATE_COMPLETE",
     "serviceProviderAwsCfStackOutputs": [
       {
         "OutputKey": "WebLambdaFunctionQualifiedArn",
-        "OutputValue": "arn:aws:lambda:us-east-1:010526251219:function:my-laravel-service-dev-web:15",
+        "OutputValue": "arn:aws:lambda:us-east-1:010526251219:function:my-laravel-service-dev-web:18",
         "Description": "Current Lambda function version",
         "ExportName": "sls-my-laravel-service-dev-WebLambdaFunctionQualifiedArn"
       },
