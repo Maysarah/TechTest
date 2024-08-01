@@ -5,7 +5,11 @@
 
 The Article API is a RESTful service designed to manage and interact with articles. This API allows users to create, read, update, and delete articles and manage associated images. It provides endpoints for listing articles, viewing details of individual articles, and managing article data.
 
-This API is built using Laravel 10 with PHP version 8.3, providing a robust and scalable solution for article management.
+This API is built using Laravel 10 with PHP version 8.3, providing a robust and scalable solution for article management. It leverages Laravel Sail for a simple and convenient local development environment, allowing you to build and manage the project using Docker containers effortlessly.
+## Deployed Project Access:
+    EC2 : http://ec2-44-202-32-108.compute-1.amazonaws.com/articles/
+    Lambda : https://bb9ohp1c70.execute-api.us-east-1.amazonaws.com/articles/
+    Swagger documentation : http://ec2-44-202-32-108.compute-1.amazonaws.com/api/documentation
 ## Getting Started (For local installation)
 
 ### Prerequisites
@@ -32,18 +36,29 @@ This API is built using Laravel 10 with PHP version 8.3, providing a robust and 
 3. Update the .env file with the database configuration and other settings.
     ```bash
 
+   local:
        DB_CONNECTION=mysql \
        DB_HOST=mysql \ 
        DB_PORT=3306 \
        DB_DATABASE=laravel-db_db \ this is an example, You can choose your own
        DB_USERNAME=root \
        DB_PASSWORD=password
+   cloud:
+       DB_CONNECTION=mysql \
+       DB_HOST= rds_link \ # Will be provided in the submission email
+       DB_PORT=3306 \
+       DB_DATABASE=laravel-db
+       DB_USERNAME=admin
+       DB_PASSWORD=laravelpassword
 
        
 
 4. Add S3 configuration to .env to manage the images part .
     ```bash
-   look at the attached file
+    AWS_ACCESS_KEY_ID=  # Will be provided in the submission email
+    AWS_SECRET_ACCESS_KEY= # Will be provided in the submission email
+    AWS_DEFAULT_REGION=us-east-1
+    AWS_BUCKET=maysarahbucket1
    
 5. Install the composer to generate the vendor directory:
     ```bash

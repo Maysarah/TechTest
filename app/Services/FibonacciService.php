@@ -12,6 +12,10 @@ class FibonacciService
      */
     public function calculateUpTo(int $n): array
     {
+        if ($n < 0) {
+            throw new \InvalidArgumentException("The value of n must be non-negative.");
+        }
+
         // Initialize the first two Fibonacci numbers
         $fibSequence = [0, 1];
 
