@@ -45,9 +45,9 @@ This API is built using Laravel 10 with PHP version 8.3, providing a robust and 
        DB_PASSWORD=password
    cloud:
        DB_CONNECTION=mysql \
-       DB_HOST= rds_link \ # Will be provided in the submission email
+       DB_HOST= rds_link 
        DB_PORT=3306 \
-       DB_DATABASE=laravel-db
+       DB_DATABASE=laravel-db \ this is an example, You can choose your own
        DB_USERNAME=admin
        DB_PASSWORD=laravelpassword
 
@@ -55,10 +55,10 @@ This API is built using Laravel 10 with PHP version 8.3, providing a robust and 
 
 4. Add S3 configuration to .env to manage the images part .
     ```bash
-    AWS_ACCESS_KEY_ID=  # Will be provided in the submission email
-    AWS_SECRET_ACCESS_KEY= # Will be provided in the submission email
-    AWS_DEFAULT_REGION=us-east-1
-    AWS_BUCKET=maysarahbucket1
+    AWS_ACCESS_KEY_ID= 
+    AWS_SECRET_ACCESS_KEY= 
+    AWS_DEFAULT_REGION=
+    AWS_BUCKET=
    
 5. Install the composer to generate the vendor directory:
     ```bash
