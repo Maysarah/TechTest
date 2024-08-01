@@ -92,3 +92,7 @@ This API is built using Laravel 10 with PHP version 8.3, providing a robust and 
 1. To run the Unit test tests
     ```bash
    ./vendor/bin/sail artisan test
+
+## Fibonacci Implementation
+### Service Class
+A service class named FibonacciService was created to handle the Fibonacci sequence calculations. The function calculateUpTo(int $n) calculates Fibonacci numbers up to a given number n. The service class is implemented to separate the Fibonacci logic from other parts of the application, following best practices for clean code and maintainability
