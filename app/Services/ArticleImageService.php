@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Services;
 
 use App\Models\Article;
@@ -37,13 +36,14 @@ class ArticleImageService
     /**
      * Delete images from S3 and the database.
      *
-     * @param iterable $images
+     * @param array $imageIds
      * @return void
      */
-    public function deleteImages(iterable $images): void
+    public function deleteImages(array $imageIds): void
     {
-        foreach ($images as $image) {
-            if ($image instanceof Image) {
+        foreach ($imageIds as $imageId) {
+            $image = Image::find($imageId);
+            if ($image) {
                 // Delete the image from S3
                 Storage::disk('s3')->delete($image->path);
 
@@ -53,4 +53,3 @@ class ArticleImageService
         }
     }
 }
-

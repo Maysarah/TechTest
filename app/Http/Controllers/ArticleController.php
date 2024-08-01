@@ -98,19 +98,19 @@ class ArticleController extends Controller
     /**
      * Show the form for editing the specified article.
      *
-     * @param Article $article
+     * @param int $id
      * @param Request $request
      * @return JsonResponse|View
      */
-    public function edit(Article $article, Request $request): JsonResponse|View
+    public function edit(int $id, Request $request): JsonResponse|View
     {
-        // Load images for the specified article
-        $article->load('images');
+        // Get article with images
+        $articleData = $this->articleService->getArticleByIdWithImages($id);
 
         // Return the view or JSON response for editing the article
         return $this->responseHandlerService->handleResponse([
             'view' => 'articles.edit',
-            'compact' => compact('article')
+            'compact' => ['article' => $articleData]
         ], $request);
     }
 
@@ -123,14 +123,17 @@ class ArticleController extends Controller
      */
     public function update(StoreArticleRequest $request, Article $article): JsonResponse|View
     {
+        // Validate request data
+        $validatedData = $request->validated();
+
         // Update the article
-        $article = $this->articleService->updateArticle($article, $request->validated());
+        $updatedArticle = $this->articleService->updateArticle($article, $validatedData);
 
         // Refresh the list of articles and return the view or JSON response
         return $this->responseHandlerService->handleResponse([
             'view' => 'articles.index',
             'compact' => [
-                'articles' => Article::with('images')->get(), // Refresh the list of articles
+                'articles' => $this->articleService->getArticlesWithImages(), // Refresh the list of articles
                 'message' => 'Article updated successfully.'
             ]
         ], $request);

@@ -18,6 +18,8 @@ class StoreArticleRequest extends FormRequest
             'title' => 'required|max:100',
             'content' => 'required',
             'images.*' => 'nullable|image|mimes:jpg,png,jpeg,gif|max:2048',
+            'images_to_delete' => 'nullable|array|exists:images,id',
+
         ];
     }
 }
