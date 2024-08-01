@@ -80,19 +80,18 @@ class ArticleController extends Controller
     /**
      * Display the specified article.
      *
-     * @param Article $article
      * @param Request $request
      * @return JsonResponse|View
      */
-    public function show(Article $article, Request $request): JsonResponse|View
+    public function show(Request $request, int $id): JsonResponse|View
     {
-        // Load images for the specified article
-        $article->load('images');
+        // Get the article with images using the service
+        $articleData = $this->articleService->getArticleByIdWithImages($id);
 
         // Return the view or JSON response with the article data
         return $this->responseHandlerService->handleResponse([
             'view' => 'articles.show',
-            'compact' => compact('article')
+            'compact' => ['article' => $articleData]
         ], $request);
     }
 
