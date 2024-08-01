@@ -1,0 +1,29 @@
+service: my-laravel-service
+
+provider:
+  name: aws
+  runtime: provided.al2
+  region: us-east-1
+  memorySize: 512
+  timeout: 60
+  environment:
+    APP_ENV: production
+    APP_DEBUG: false
+    APP_KEY: ${env:APP_KEY}
+    DB_CONNECTION: mysql
+    DB_HOST: ${env:DB_HOST}
+    DB_PORT: 3306
+    DB_DATABASE: ${env:DB_DATABASE}
+    DB_USERNAME: ${env:DB_USERNAME}
+    DB_PASSWORD: ${env:DB_PASSWORD}
+
+plugins:
+  - ./vendor/bref/bref
+
+functions:
+  web:
+    handler: public/index.php
+    layers:
+      - ${bref:layer.php-82-fpm}  # PHP 8.2 layer
+    events:
+      - httpApi: '*'  # Expose this Lambda function as an HTTP API
