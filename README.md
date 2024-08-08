@@ -8,7 +8,7 @@ The Article API is a RESTful service designed to manage and interact with articl
 This API is built using Laravel 10 with PHP version 8.3, providing a robust and scalable solution for article management. It leverages Laravel Sail for a simple and convenient local development environment, allowing you to build and manage the project using Docker containers effortlessly.
 ## Deployed Project Access:
     EC2 : http://ec2-44-202-32-108.compute-1.amazonaws.com/articles/
-    Lambda : https://bb9ohp1c70.execute-api.us-east-1.amazonaws.com/articles/
+    Lambda : https://tbsnpm14rk.execute-api.us-east-1.amazonaws.com/articles
     Swagger documentation : http://ec2-44-202-32-108.compute-1.amazonaws.com/api/documentation
 ## Getting Started (For local installation)
 
